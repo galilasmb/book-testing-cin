@@ -3,13 +3,26 @@ title: Sobre
 subtitle: Sobre o site
 layout: page
 show_sidebar: true
+youtubeId: dhh9zcA6Xwk
 ---
 
-# Assista ao vídeo
+# Para inserir um vídeo do Youtube
 
-<iframe width="850" height="450" src="https://www.youtube.com/embed/dhh9zcA6Xwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+Para incluir um vídeo do Youtube, procure pelo seu ID!
+Exemplo:     youtubeId: dhh9zcA6Xwk
+Insira o comando abaixo dentro das chaves:{ % Aqui %}
+     include youtubePlayer.html id=page.youtubeId
+```
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 
-# Vídeo responsivo
+# Para inserir um vídeo do Google Drive
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/dhh9zcA6Xwk' frameborder='0' allowfullscreen></iframe></div>
+```
+Para incluir um vídeo do Google Drive, procure pelo ID no youtube!
+Exemplo:     driveId: dhh9zcA6Xwk
+Insira o comando abaixo dentro das chaves:{ % Aqui %}
+    include googleDrivePlayer.html id=page.driveId
+```
