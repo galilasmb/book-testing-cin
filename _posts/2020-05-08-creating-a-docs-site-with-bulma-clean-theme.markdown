@@ -3,12 +3,7 @@ layout: post
 title: Creating a docs site with Bulma Clean Theme
 description: How to create a docs site for your project with Bulma Clean Theme 
 date: 2020-05-08 09:00:07
-hero_image: https://www.csrhymes.com/img/example-docs-page.jpg
-hero_height: is-large
-hero_darken: true
-image: https://www.csrhymes.com/img/example-docs-page.jpg
-tags: bulma-clean-theme jekyll docs
-canonical_url: https://www.csrhymes.com/2020/05/08/creating-a-docs-site-with-bulma-clean-theme.html
+image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
 ---
 
 I created Bulma Clean Theme as a theme for my own website and decided to open source it so others could use it as well. One of the key things I wanted to do was to create a theme that worked with GitHub Pages, which also means that you can also use it as a docs site for your project. 

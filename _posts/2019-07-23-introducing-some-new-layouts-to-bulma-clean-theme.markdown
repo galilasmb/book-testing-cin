@@ -3,12 +3,8 @@ layout: post
 title:  "Introducing some new layouts to Bulma Clean Theme"
 date:   2019-07-23 08:00:07
 description: "Introducing Product Pages and Landing Pages for Bulma Clean Theme"
-image: 'https://www.csrhymes.com/img/landing-page.jpg'
-hero_image: https://www.csrhymes.com/img/landing-page.jpg
-hero_height: is-large
+image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
 published: true
-tags: webdev showdev webdesign
-canonical_url: https://www.csrhymes.com/2019/07/23/introducing-some-new-layouts-to-bulma-clean-theme.html
 ---
 
 
