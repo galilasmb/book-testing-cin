@@ -1,14 +1,13 @@
 # Site Settings
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: Site para teste
+tagline: Descrever algo aqui
+email: galileu.santos@ufpe.br
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+  Este é um site para descrição de como criar um blog
 
 baseurl: "/book-testing-cin"
 url: "https://galilasmb.github.io"
 permalink: pretty
-#favicon: /path/to/favicon.png
 gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 

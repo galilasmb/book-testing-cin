@@ -1,17 +1,17 @@
 ---
-title: Page without sidebar
-subtitle: Demo page without the sidebar
+title: Página 2
+subtitle: Descrição da página 2
 layout: page
-show_sidebar: false
+show_sidebar: true
 ---
 
-This is another sample page showing how a page can look without a sidebar. 
+Escrever alguma coisa para esta página.
 
-To hide the sidebar, set the show_sidebar to false in the page's frontmatter
+Ao lado desta página tem um menu com as postagens do blog.
 
 ```yml
-title: Page without sidebar
-subtitle: Demo page without the sidebar
+title: Título de teste
+subtitle: Subtítulo
 layout: page
-show_sidebar: false
+show_sidebar: true
 ```

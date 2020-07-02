@@ -1,17 +1,17 @@
 ---
-title: Page With Sidebar
-subtitle: A demo page with a sidebar
+title: Página 1
+subtitle: Descrição da página 1
 layout: page
 show_sidebar: true
 ---
 
-This is a demo page showing the sidebar.
+Escrever alguma coisa para esta página.
 
-To show the sidebar set show_sidebar to true in the page's frontmatter.
+Ao lado desta página tem um menu com as postagens do blog.
 
 ```yml
-title: Page With Sidebar
-subtitle: A demo page with a sidebar
+title: Título de teste
+subtitle: Subtítulo
 layout: page
 show_sidebar: true
 ```
