@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/book-testing-cin/development/2018/05/28/why-use-a-static-site-generator.html</loc>
+<lastmod>2018-05-28T07:50:07-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/book-testing-cin/development/2019/02/09/getting-started-with-bulma-clean-theme.html</loc>
+<lastmod>2019-02-09T17:00:07-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/book-testing-cin/2019/07/23/introducing-some-new-layouts-to-bulma-clean-theme.html</loc>
+<lastmod>2019-07-23T05:00:07-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/book-testing-cin/2020/05/08/creating-a-docs-site-with-bulma-clean-theme.html</loc>
+<lastmod>2020-05-08T06:00:07-03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/book-testing-cin/jekyll/update/2020/07/01/welcome-to-jekyll.html</loc>
 <lastmod>2020-07-01T19:17:36-03:00</lastmod>
 </url>
@@ -19,9 +35,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/book-testing-cin/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/book-testing-cin/landing.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/book-testing-cin/material.html</loc>
