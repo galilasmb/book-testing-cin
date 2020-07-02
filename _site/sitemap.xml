@@ -15,7 +15,13 @@
 <loc>http://localhost:4000/book-testing-cin/eventos/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/book-testing-cin/blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/book-testing-cin/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/book-testing-cin/landing.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/book-testing-cin/material.html</loc>
