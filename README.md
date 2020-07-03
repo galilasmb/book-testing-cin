@@ -206,7 +206,7 @@ url: ""  # the base hostname & protocol for your site, e.g. http://example.com
 
 ```
 
-In my the Github Page Link: https://galilasmb.github.io//book-testing-cin , the configuration was:
+In my the Github Page Link: https://galilasmb.github.io/book-testing-cin , the configuration was:
 ```yaml
 baseurl: "/book-testing-cin"
 url: "https://galilasmb.github.io"
