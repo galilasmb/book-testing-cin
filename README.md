@@ -1,6 +1,6 @@
-# ========================================
-# ====== Starting forking this repo ======
-# ========================================
+
+# ----- Starting forking this repo -----
+
 
 # Step 1: Forking this repo
 
@@ -95,9 +95,8 @@ driveId: dhh9zcA6Xwk
 
 
 
-# ========================================
-# ========== Starting from zero ==========
-# ========================================
+# ----- Starting from zero -----
+
 
 The following tutorials are taken from: https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a and https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md. Acessed in Jul 2, 2020.
 
