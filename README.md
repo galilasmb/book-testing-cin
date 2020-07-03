@@ -102,14 +102,14 @@ driveId: dhh9zcA6Xwk
 
 4. Adding a Google Drive video in your page:
 
-3.1. Search your video ID in Google Drive. Open the vídeo and catch the your ID. Example: dhh9zcA6Xwk
+4.1. Search your video ID in Google Drive. Open the vídeo and catch the your ID. Example: dhh9zcA6Xwk
 
-3.2. Insert the follow command into: **{ % here %}**
+4.2. Insert the follow command into: **{ % here %}**
 ```xml
      include googleDrivePlayer.html id=page.driveId
 ```
 
-3.3. Add driveId in your page configuration
+4.3. Add driveId in your page configuration
 
 
 
