@@ -1,4 +1,201 @@
-# bulma-clean-theme
+# ==============================================
+# ========= Starting forking this repo =========
+# ==============================================
+
+# Step 1: Forking this repo
+
+# Step 2: Installing the ruby
+1. If the ruby was not installed, do it using:
+```
+sudo apt install ruby-full
+```  
+
+2. Publish the blog locally and see how it appears:
+```
+bundle exec jekyll serve
+```
+
+3. Now, your site should be up and running on your local host: http://127.0.0.1:4000/
+
+# Step 3: Public on Github Pages
+
+1. Go to settings in your repo and find the ‘Github Pages’ section. Click on the link there and you will be able to see your published site!
+
+2. Configure the Github Pages Link in your local repo. Open the file **_config.yml** and edit:
+```yaml
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""  # the base hostname & protocol for your site, e.g. http://example.com
+
+```
+
+In my the Github Page Link: https://galilasmb.github.io//book-testing-cin , the configuration was:
+```yaml
+baseurl: "/book-testing-cin"
+url: "https://galilasmb.github.io"
+```
+You can to edit other configuration how you wanted.
+
+3. Push your modification in github and open the link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/<baseurl>, in my case, was: http://127.0.0.1:4000/book-testing-cin/
+
+# Step 4: Adding new post in your blog
+
+1. Add a new file .md in path **_post**
+
+2. Push your modification in your fork
+
+
+# Step 5: [Configuring a page](#navigation)
+
+
+# Step 6: [Configure the menu and page](#menubar)
+
+# Step 7: Create a new page and adding a youtube and drive video
+
+1. Create a .md file and add in Step 5 and 6 configuration.
+
+2. In your file, add the page configuration:
+
+```xml
+---
+title: Page title
+subtitle: Description
+layout: page
+show_sidebar: true
+youtubeId: dhh9zcA6Xwk
+driveId: dhh9zcA6Xwk
+---
+```
+
+3. Adding a youtube video in your page:
+
+3.1. Search your video ID in youtube. Example: dhh9zcA6Xwk
+
+3.2. Insert the follow command into: **{ % here %}**
+```xml
+     include youtubePlayer.html id=page.youtubeId
+```
+
+3.3. Add youtubeId in your page configuration
+
+
+4. Adding a Google Drive video in your page:
+
+3.1. Search your video ID in Google Drive. Open the vídeo and catch the your ID. Example: dhh9zcA6Xwk
+
+3.2. Insert the follow command into: **{ % here %}**
+```xml
+     include googleDrivePlayer.html id=page.driveId
+```
+
+3.3. Add driveId in your page configuration
+
+
+
+** Enjoy :D **
+
+
+
+# ==============================================
+# ============== Starting from Zero ============
+# ==============================================
+
+The following tutorials are taken from: https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a and https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md. Acessed in Jul 2, 2020.
+
+# Using Jekyll + Github pages
+Jekyll is a static site generator that you can use to create simple sites or blogs and Github pages is a static site hosting service.
+
+# Step 1: Install Jekyll
+
+1. We need to install the ruby, because jekyll runs on ruby. (Ruby version must be 2.1 or higher)
+
+2. To check the version of ruby installed, type:
+
+```ruby
+ruby -v
+``` 
+
+3. To chek the version of the gem:
+
+```ruby
+gem -v
+```  
+
+4. If the ruby was not installed, do it using:
+
+```
+sudo apt install ruby-full
+```  
+
+5. Now, we need to install the jekyll:
+
+```
+gem install jekyll bundler
+```  
+
+6. check the version of jekyll installed:
+```
+jekyll -v
+```  
+
+# Step 2: Create a Jekyll Blog on your local machine:
+
+
+1. Create a local project:
+```
+jekyll new projectName
+```
+
+My project name was book-testing-cin
+
+2. Publish the blog locally and see how it appears:
+```
+bundle exec jekyll serve
+```
+
+3. Now, your site should be up and running on your local host: http://127.0.0.1:4000/
+
+The default theme of jekyll is **theme: minima**, for install other theme, open the file **_config.yml*** e change the theme. How showing in the Step 5.
+
+
+Step 3: Publishing in on Github Pages
+
+1. Create a new github account.
+
+2. Create a new github repo and name it with same name as your local folder, in my case, book-testing-cin.
+
+3. To initialise your git repo, open in your project path:
+```
+git init
+git add .
+git commit -m "First commit"
+git remote add origin <git repo link>
+git push -u origin master
+
+```
+
+4. To access your published site, go to settings and find the ‘Github Pages’ section. Click on the link there and you will be able to see your published site!
+
+
+# Step 4: Configuring the Github Pages
+
+1. Configure the Github Pages Link in your local repo. Open the file **_config.yml** and edit:
+```yaml
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""  # the base hostname & protocol for your site, e.g. http://example.com
+
+```
+
+In my the Github Page Link: https://galilasmb.github.io//book-testing-cin , the configuration was:
+```yaml
+baseurl: "/book-testing-cin"
+url: "https://galilasmb.github.io"
+```
+You can to edit other configuration how you wanted.
+
+2. Push your modification in github and open the link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/<baseurl>, in my case, was: http://127.0.0.1:4000/book-testing-cin/
+
+
+# Step 5: How to use bulma-clean-theme
 
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
 ![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
@@ -27,9 +224,6 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Showcases](#showcases)
     * [Sponsors](#sponsors)
     * [Disqus](#disqus)
-* [Contributing](#contributing)
-* [Development](#development)
-* [Licence](#licence)
 
 
 ## Installation
@@ -154,7 +348,7 @@ You will probably want to disable the show_sidebar otherwise there will be littl
 
 #### Creating a menubar data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the **_data** directory and use the following format (if using yml)
 
 ```yaml
 - label: Example Menu
@@ -219,7 +413,7 @@ Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
 #### Creating a tabs data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the **_data** directory and use the following format (if using yml)
 
 ```yaml
 alignment: is-left
@@ -527,20 +721,3 @@ Comments are enabled by default. If you want to disable them, set in the front m
 ```markdown
 comments: false
 ```
-
-
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
