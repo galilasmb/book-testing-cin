@@ -2,7 +2,7 @@
 # ----- Starting from a fork this repo -----
 
 
-# Step 1: Forking this repo
+# Step 1: Do a fork this repo
 
 # Step 2: Installing the ruby
 1. If the ruby was not installed, do it using:
