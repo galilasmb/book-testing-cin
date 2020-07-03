@@ -10,13 +10,6 @@
 sudo apt install ruby-full
 ```  
 
-2. Publish the blog locally and see how it appears:
-```
-bundle exec jekyll serve
-```
-
-3. Now, your site should be up and running on your local host: http://127.0.0.1:4000/
-
 # Step 3: Public on Github Pages
 
 1. Go to settings in your repo and find the ‘Github Pages’ section. Click on the link there and you will be able to see your published site!
@@ -35,7 +28,15 @@ url: "https://galilasmb.github.io"
 ```
 You can to edit other configuration how you wanted.
 
-3. Push your modification in github and open the github page link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/baseurl, in my case, was: http://127.0.0.1:4000/book-testing-cin/
+3. Publish the blog locally before pushed your modifications and see how it appears:
+```
+bundle exec jekyll serve
+```
+
+4. Open the url in your browser: http://127.0.0.1:4000/baseurl, in my case, was: http://127.0.0.1:4000/book-testing-cin/Now
+
+5. Push your modification in github and open the github page link, in my case, was: https://galilasmb.github.io/book-testing-cin
+
 
 # Step 4: Adding new post in your blog
 
@@ -64,9 +65,7 @@ Insert here your content...
 
 3. Push your modification in your fork
 
-
 # Step 5: [Configuring a page](#navigation)
-
 
 # Step 6: [Configure the menu and page](#menubar)
 
@@ -97,7 +96,6 @@ driveId: dhh9zcA6Xwk
 ```
 
 3.3. Add youtubeId in your page configuration
-
 
 4. Adding a Google Drive video in your page:
 
