@@ -59,8 +59,11 @@ Insert here your content...
 ```
 
 2.1. Insert the post title
+
 2.2. Insert the post date, this will influence the order in which it will appear on the website
+
 2.3. The image will appear in the post sidebar, then choose an image or delete this line
+
 2.4. Insert the post category
 
 3. Push your modification in your fork
