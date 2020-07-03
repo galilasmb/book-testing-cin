@@ -1,5 +1,5 @@
 
-# ----- Starting forking this repo -----
+# ----- Starting from a fork this repo -----
 
 
 # Step 1: Forking this repo
