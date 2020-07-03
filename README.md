@@ -33,7 +33,7 @@ You can to edit other configuration how you wanted.
 bundle exec jekyll serve
 ```
 
-4. Open the url in your browser: http://127.0.0.1:4000/baseurl, in my case, was: http://127.0.0.1:4000/book-testing-cin/Now
+4. Open the url in your browser: http://127.0.0.1:4000/baseurl, in my case, was: http://127.0.0.1:4000/book-testing-cin
 
 5. Push your modification in github and open the github page link, in my case, was: https://galilasmb.github.io/book-testing-cin
 
