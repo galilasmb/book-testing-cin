@@ -28,20 +28,41 @@ url: ""  # the base hostname & protocol for your site, e.g. http://example.com
 
 ```
 
-In my the Github Page Link: https://galilasmb.github.io//book-testing-cin , the configuration was:
+In my the Github Page Link I used: https://galilasmb.github.io//book-testing-cin, the configuration was:
 ```yaml
 baseurl: "/book-testing-cin"
 url: "https://galilasmb.github.io"
 ```
 You can to edit other configuration how you wanted.
 
-3. Push your modification in github and open the link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/<baseurl>, in my case, was: http://127.0.0.1:4000/book-testing-cin/
+3. Push your modification in github and open the github page link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/baseurl, in my case, was: http://127.0.0.1:4000/book-testing-cin/
 
 # Step 4: Adding new post in your blog
 
 1. Add a new file .md in path **_post**
 
-2. Push your modification in your fork
+2. Insert the post configuration:
+
+```xml
+
+---
+layout: post
+title:  "Post Title"
+date:   2020-07-01 19:48:36 -0300
+image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
+categories: video
+---
+
+Insert here your content...
+
+```
+
+2.1. Insert the post title
+2.2. Insert the post date, this will influence the order in which it will appear on the website
+2.3. The image will appear in the post sidebar, then choose an image or delete this line
+2.4. Insert the post category
+
+3. Push your modification in your fork
 
 
 # Step 5: [Configuring a page](#navigation)
@@ -49,7 +70,7 @@ You can to edit other configuration how you wanted.
 
 # Step 6: [Configure the menu and page](#menubar)
 
-# Step 7: Create a new page and adding a youtube and drive video
+# Step 7: Adding a youtube and drive video in your content page or post 
 
 1. Create a .md file and add in Step 5 and 6 configuration.
 
