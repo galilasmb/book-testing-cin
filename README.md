@@ -1,36 +1,241 @@
-# bulma-clean-theme
+## Contents
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
+- [Installation](#installation)
+  - [Forking repository](#forking-repository)
+    - [Step 1: Forking this repository](#step-1-forking-this-repository)
+    - [Step 2: Installing Ruby](#step-2-installing-ruby)
+    - [Step 3: Configuring Github Pages and running locally](#step-3-configuring-github-pages-and-running-locally)
+    - [Step 4: Adding a new post](#step-4-adding-a-new-post)
+    - [Step 5: Configuring a page](#step-5-configuring-a-page)
+    - [Step 6: Configuring the menu and page](#step-6-configuring-the-menu-and-page)
+    - [Step 7: Adding an YouTube or Google Drive video](#step-7-adding-an-youtube-or-google-drive-video)
+  - [Starting from zero](#starting-from-zero)
 
-This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
+## Installation
+
+There are many ways of installing this project but we focused in these two options: `Forking this repository` and `Starting from zero.`
+
+### Forking Repository
+
+Follow these steps to create a fork and run (or deploy) this project.
+
+#### Step 1: Forking this repository
+
+#### Step 2: Installing Ruby
+
+If you don't have Ruby installed, you can get it following these instructions: https://www.ruby-lang.org/en/documentation/installation/
+
+#### Step 3: Configuring Github Pages and running locally
+
+After installing Ruby, go on your forked repository Github page, click on `Settings` tab and find a section called `Github pages` inside `Options`. Select a source (you can use **master**) and that's it, your repository is published. (You can find more information here: https://pages.github.com/)
+
+Now, clone your forked repository and open it in a code editor (i.e. Visual Studio Code). Open the **\_config.yml** file and edit these lines:
+
+```yaml
+baseurl: "" # subpath for your site, e.g. /blog
+url: "" # base hostname & protocol for your site, e.g. http://example.com
+```
+
+Change them to the subpath you'll use to publish the project. In this project we used: https://galilasmb.github.io/book-testing-cin, so these lines were modified to:
+
+```yaml
+baseurl: "/book-testing-cin"
+url: "https://galilasmb.github.io"
+```
+
+You can also edit other options if you need.
+
+Now, if you want to see how it appears, you can run:
+
+```
+    bundle exec jekyll serve
+```
+
+After the project building, open your browser and type http://127.0.0.1:4000/[your base url] to see the result.
+
+If you want to see theses changes published online, you must push them to repository and after that, open your generated Github pages link (https://[your Github user].github.io/[you base url]).
+
+#### Step 4: Adding a new post
+
+Creating a new post is very simple, just follow theses steps:
+
+1. Create a new .md file in **\_post** path.
+2. Add this configuration to **each new post**:
+
+```xml
+
+---
+layout: post
+title:  "Post Title"
+date:   2020-07-01 19:48:36 -0300
+image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
+categories: video
+---
+
+Insert your content here...
+
+```
+
+3. Change the post title
+4. Insert the post date (This will influence the order in which it will appear on the website)
+5. The image will appear in the posts sidebar, so choose an image or delete this line
+6. Choose a post category (This will group posts in a specific tag)
+7. Push your modifications
+
+#### Step 5: [Configuring a page](#navigation)
+
+#### Step 6: [Configure the menu and page](#menubar)
+
+#### Step 7: Adding an YouTube or Google Drive video
+
+1. Create a .md file and add configurations from Step 5 and 6.
+2. In your file, add a youtubeId and/or driveId key(s)
+   2.1 You can find these id values in the url like `dhh9zcA6Xwk` from https://www.youtube.com/watch?v=dhh9zcA6Xwk
+
+```xml
+---
+title: Page title
+subtitle: Description
+layout: page
+show_sidebar: true
+youtubeId: dhh9zcA6Xwk
+driveId: dhh9zcA6Xwk
+---
+
+include youtubePlayer.html id=page.youtubeId
+include googleDrivePlayer.html id=page.driveId
+
+```
+
+**Enjoy :D**
+
+# ----- Starting from zero -----
+
+The following tutorials are taken from: https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a and https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md. Acessed in Jul 2, 2020.
+
+# Using Jekyll + Github pages
+
+Jekyll is a static site generator that you can use to create simple sites or blogs and Github pages is a static site hosting service.
+
+# Step 1: Install Jekyll
+
+1. We need to install the ruby, because jekyll runs on ruby. (Ruby version must be 2.1 or higher)
+
+2. To check the version of ruby installed, type:
+
+```ruby
+ruby -v
+```
+
+3. To chek the version of the gem:
+
+```ruby
+gem -v
+```
+
+4. If the ruby was not installed, do it using:
+
+```
+sudo apt install ruby-full
+```
+
+5. Now, we need to install the jekyll:
+
+```
+gem install jekyll bundler
+```
+
+6. check the version of jekyll installed:
+
+```
+jekyll -v
+```
+
+# Step 2: Create a Jekyll Blog on your local machine:
+
+1. Create a local project:
+
+```
+jekyll new projectName
+```
+
+My project name was book-testing-cin
+
+2. Publish the blog locally and see how it appears:
+
+```
+bundle exec jekyll serve
+```
+
+3. Now, your site should be up and running on your local host: http://127.0.0.1:4000/
+
+The default theme of jekyll is **theme: minima**, for install other theme, open the file **\_config.yml\*** e change the theme. How showing in the Step 5.
+
+Step 3: Publishing in on Github Pages
+
+1. Create a new github account.
+
+2. Create a new github repository and name it with same name as your local folder, in my case, book-testing-cin.
+
+3. To initialise your git repository, open in your project path:
+
+```
+git init
+git add .
+git commit -m "First commit"
+git remote add origin <git repository link>
+git push -u origin master
+
+```
+
+4. To access your published site, go to settings and find the ‘Github Pages’ section. Click on the link there and you will be able to see your published site!
+
+# Step 4: Configuring the Github Pages
+
+1. Configure the Github Pages Link in your local repository. Open the file **\_config.yml** and edit:
+
+```yaml
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+```
+
+In my the Github Page Link: https://galilasmb.github.io/book-testing-cin , the configuration was:
+
+```yaml
+baseurl: "/book-testing-cin"
+url: "https://galilasmb.github.io"
+```
+
+You can to edit other configuration how you wanted.
+
+2. Push your modification in github and open the link. If you to want view the result locally, run the command 3 of the step 3 and open the url in your browser: http://127.0.0.1:4000/<baseurl>, in my case, was: http://127.0.0.1:4000/book-testing-cin/
+
+# Step 5: How to use bulma-clean-theme
+
+This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with.
 
 ## Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-    * [Pages](#pages)
-        * [Page Hero](#page-hero)
-        * [Table Of Contents](#table-of-contents)
-    * [Posts](#posts)
-    * [Navigation](#navigation)
-    * [Colours and Styles](#colours-and-styles)
-    * [Sidebar Visibility](#sidebar-visibility)
-    * [Menubar](#menubar)
-    * [Tabs](#tabs)
-    * [Google Analytics](#google-analytics)
-    * [Footer](#footer)
-    * [Products](#products)
-    * [Scripts](#scripts)
-    * [Callouts](#callouts)
-    * [Favicon](#favicon)
-    * [Showcases](#showcases)
-    * [Sponsors](#sponsors)
-    * [Disqus](#disqus)
-* [Contributing](#contributing)
-* [Development](#development)
-* [Licence](#licence)
-
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Pages](#pages)
+    - [Page Hero](#page-hero)
+    - [Table Of Contents](#table-of-contents)
+  - [Posts](#posts)
+  - [Navigation](#navigation)
+  - [Colours and Styles](#colours-and-styles)
+  - [Sidebar Visibility](#sidebar-visibility)
+  - [Menubar](#menubar)
+  - [Tabs](#tabs)
+  - [Google Analytics](#google-analytics)
+  - [Footer](#footer)
+  - [Products](#products)
+  - [Scripts](#scripts)
+  - [Callouts](#callouts)
+  - [Favicon](#favicon)
+  - [Showcases](#showcases)
+  - [Sponsors](#sponsors)
+  - [Disqus](#disqus)
 
 ## Installation
 
@@ -58,16 +263,16 @@ Or install it yourself as:
 
 ## Usage
 
-### Pages 
+### Pages
 
 Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the front matter and it will appear in the hero.
 
 #### Page Hero
 
-**New in 0.2** 
+**New in 0.2**
 Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-You can also set the height of the hero by providing a bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
+You can also set the height of the hero by providing a bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
 **New in 0.5.4**
 If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
@@ -81,7 +286,7 @@ If you would like to darken the hero so the title stands out more, you can set `
 #### Table Of Contents
 
 **New in 0.5.8**
-If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
+If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter.
 
 ### Posts
 
@@ -102,7 +307,6 @@ You can also set the height of the hero by providing a Bulma hero height class i
 
 Share buttons will be displayed on your posts unless you hide them by adding `hide_share_buttons: true` to your config file.
 
-
 ### Navigation
 
 For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can now also add items to a dropdown menu.
@@ -112,7 +316,7 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
   link: /page-1/
 - name: Blog
   link: /blog/
-  dropdown: 
+  dropdown:
     - name: Page 2
       link: /page-2/
 ```
@@ -143,18 +347,18 @@ If you want to show the sidebar with latest posts then set `show_sidebar: true` 
 
 **New in 0.3**
 
-The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
+The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter.
 
 ```yaml
 show_sidebar: false
 menubar: example_menu
 ```
 
-You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
+You will probably want to disable the show_sidebar otherwise there will be little room for the page content.
 
 #### Creating a menubar data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the **\_data** directory and use the following format (if using yml)
 
 ```yaml
 - label: Example Menu
@@ -164,7 +368,7 @@ Create a data file in the _data directory and use the following format (if using
     - name: Pages
       link: #
       items:
-        - name: Page With Sidebar 
+        - name: Page With Sidebar
           link: /page-1/
         - name: Page Without Sidebar
           link: /page-2/
@@ -190,7 +394,7 @@ You may make multiple menus in the same file, separated by the label
     - name: Parent Item
       link: /parent-item/
       items:
-        - name: Sublink 
+        - name: Sublink
           link: /sublink/
         - name: Sublink 2
           link: /sublink2/
@@ -204,7 +408,7 @@ You may make multiple menus in the same file, separated by the label
 
 **New in 0.4**
 
-The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
+The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter.
 
 ```yaml
 title: Page with tabs
@@ -215,11 +419,11 @@ menubar: example_menu
 tabs: example_tabs
 ```
 
-Tabs can be used in conjunction with menubar and/or sidebar if you wish. 
+Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
 #### Creating a tabs data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the **\_data** directory and use the following format (if using yml)
 
 ```yaml
 alignment: is-left
@@ -242,7 +446,7 @@ items:
 
 #### Settings
 
-You can control the alignment, style and size of the tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/). 
+You can control the alignment, style and size of the tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/).
 
 #### Active Tab Highlighting
 
@@ -254,8 +458,7 @@ You can add icons to your tab by passing in the [Font Awesome icon class](https:
 
 If you don't wish to show icons then simply omit the option from your yaml file.
 
-
-### Google Analytics 
+### Google Analytics
 
 **New in 0.2**
 
@@ -292,11 +495,11 @@ If you would like to hide the footer on a particular page then set `hide_footer:
 
 **New in 0.5**
 
-Now you can add simple product pages to your site using collections. 
+Now you can add simple product pages to your site using collections.
 
 #### Product pages
 
-Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating. 
+Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating.
 
 ```yaml
 title: Product 1 Name
@@ -308,29 +511,29 @@ layout: product
 image: https://via.placeholder.com/640x480
 price: £1.99 + VAT
 features:
-    - label: Great addition to any home
-      icon: fa-location-arrow
-    - label: Comes in a range of styles
-      icon: fa-grin-stars
-    - label: Available in multiple sizes
-      icon: fa-fighter-jet
+  - label: Great addition to any home
+    icon: fa-location-arrow
+  - label: Comes in a range of styles
+    icon: fa-grin-stars
+  - label: Available in multiple sizes
+    icon: fa-fighter-jet
 rating: 3
 ```
 
-The text you write for the page content will be displayed as the product description. 
+The text you write for the page content will be displayed as the product description.
 
-Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages. 
+Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages.
 
 ```yaml
 collections:
-  products: 
+  products:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
 ```
 
-You can also set default product page values here if you like, such as the layout or image. 
+You can also set default product page values here if you like, such as the layout or image.
 
 #### Product Reviews
 
@@ -344,20 +547,20 @@ To add reviews to your product page, create a `reviews` directory in the `_data`
   avatar: https://bulma.io/images/placeholders/128x128.png
   description: >
     The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. 
-    Would recommend this to my friends. 
+    Would recommend this to my friends.
 - name: Mrs R E View
   rating: 5
   title: Nice, really liked this
   date: 02/02/2019
   description: >
-    The product worked exactly as described. 
+    The product worked exactly as described.
 ```
 
 If you don't want to display an avatar image then a default user icon will be displayed. If you don't want to display a rating then omit it from the yml.
 
 #### Product Category Page
 
-To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
+To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set.
 
 ```yaml
 title: Products
@@ -377,11 +580,11 @@ There are two new files within the includes directory called `head-scripts.html`
 
 **New in 0.5.4**
 
-You can now add callouts to a page to make a landing page style layout. 
+You can now add callouts to a page to make a landing page style layout.
 
 #### Create a callout data file
 
-Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
+Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.
 
 **New in 0.5.7** You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.
 
@@ -398,7 +601,7 @@ items:
     description: >
       The example description text goes here and can be multiple lines.
 
-      For example, such as this. 
+      For example, such as this.
     call_to_action_name: Call to action 1
     call_to_action_link: /page-1/
 ```
@@ -420,24 +623,24 @@ The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwri
 
 ### Showcases
 
-Showcases allow you to display your work to others using a simple layout. 
+Showcases allow you to display your work to others using a simple layout.
 
 #### Creating A Showcase Datafile
 
-Create a datafile in your sites `_data` directory in the following format. Subtitle, features and tags are not required. 
+Create a datafile in your sites `_data` directory in the following format. Subtitle, features and tags are not required.
 
 The description text accepts markdown and is run through the markdownify filter on the page.
 
 The image_ratio will default to is-16by9 if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
 
-To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as `chrisrhymes/bulma-clean-theme`
+To display GitHub Stars, Forks and Watchers badges add your GitHub user and repository name to the github setting, such as `chrisrhymes/bulma-clean-theme`
 
 To change the default styles of the features, set `features_styles`. This uses the styles from [bulma-block-list](https://www.csrhymes.com/bulma-block-list/) npm package.
 
 ```yaml
 intro: |-
   This is some introduction text for the showcases.
-  
+
   ## Example Heading
   It can convert markdown format
 
@@ -460,7 +663,7 @@ items:
 
 #### Displaying the Showcase
 
-Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages. 
+Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages.
 
 ```yaml
 title: Showcase
@@ -503,7 +706,7 @@ If you would like to create a page to thank your sponsors then create a data fil
 ```
 
 The `tier_name` and `description` are required. The `size` is not required, but can be overwritten to 'large' or 'small' to increase or decrease the size of the box and the text size.
- 
+
 The sponsors require a name, but not a profile link.
 
 #### Displaying the Sponsors
@@ -518,29 +721,198 @@ sponsors: my_sponsors
 
 ### Disqus
 
-Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. Then you need to set your Jekyll environment to production: 
+Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. Then you need to set your Jekyll environment to production:
 
-```JEKYLL_ENV=production bundle exec jekyll build```. 
+`JEKYLL_ENV=production bundle exec jekyll build`.
 
-Comments are enabled by default. If you want to disable them, set in the front matter this setting: 
+Comments are enabled by default. If you want to disable them, set in the front matter this setting:
 
 ```markdown
 comments: false
 ```
 
+# Dillinger
 
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-## Contributing
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
 
-## Development
+- Type some Markdown on the left
+- See HTML in the right
+- Magic
 
-To set up your environment to develop this theme, run `bundle install`.
+# New Features!
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+- Import a HTML file and watch it magically convert to Markdown
+- Drag and drop images (requires your Dropbox account be linked)
+
+You can also:
+
+- Import and save files from GitHub, Dropbox, Google Drive and One Drive
+- Drag and drop markdown and HTML files into Dillinger
+- Export documents as Markdown, HTML and PDF
+
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email. As [John Gruber] writes on the [Markdown site][df1]
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This text you see here is _actually_ written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+
+### Tech
+
+Dillinger uses a number of open source projects to work properly:
+
+- [AngularJS] - HTML enhanced for web apps!
+- [Ace Editor] - awesome web-based text editor
+- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+- [Twitter Bootstrap] - great UI boilerplate for modern web apps
+- [node.js] - evented I/O for the backend
+- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Gulp] - the streaming build system
+- [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
+- [jQuery] - duh
+
+And of course Dillinger itself is open source with a [public repository][dill]
+on GitHub.
+
+### Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd dillinger
+$ npm install -d
+$ node app
+```
+
+For production environments...
+
+```sh
+$ npm install --production
+$ NODE_ENV=production node app
+```
+
+### Plugins
+
+Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+
+| Plugin           | README                                    |
+| ---------------- | ----------------------------------------- |
+| Dropbox          | [plugins/dropbox/README.md][pldb]         |
+| GitHub           | [plugins/github/README.md][plgh]          |
+| Google Drive     | [plugins/googledrive/README.md][plgd]     |
+| OneDrive         | [plugins/onedrive/README.md][plod]        |
+| Medium           | [plugins/medium/README.md][plme]          |
+| Google Analytics | [plugins/googleanalytics/README.md][plga] |
+
+### Development
+
+Want to contribute? Great!
+
+Dillinger uses Gulp + Webpack for fast developing.
+Make a change in your file and instantaneously see your updates!
+
+Open your favorite Terminal and run these commands.
+
+First Tab:
+
+```sh
+$ node app
+```
+
+Second Tab:
+
+```sh
+$ gulp watch
+```
+
+(optional) Third:
+
+```sh
+$ karma test
+```
+
+#### Building for source
+
+For production release:
+
+```sh
+$ gulp build --prod
+```
+
+Generating pre-built zip archives for distribution:
+
+```sh
+$ gulp build dist --prod
+```
+
+### Docker
+
+Dillinger is very easy to install and deploy in a Docker container.
+
+By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+
+```sh
+cd dillinger
+docker build -t joemccann/dillinger:${package.json.version} .
+```
+
+This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
+
+Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+
+```sh
+docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
+```
+
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:8000
+```
+
+#### Kubernetes + Google Cloud
+
+See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+
+### Todos
+
+- Write MORE Tests
+- Add Night Mode
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+MIT
 
+**Free Software, Hell Yeah!**
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[dill]: https://github.com/joemccann/dillinger
+[git-repo-url]: https://github.com/joemccann/dillinger.git
+[john gruber]: http://daringfireball.net
+[df1]: http://daringfireball.net/projects/markdown/
+[markdown-it]: https://github.com/markdown-it/markdown-it
+[ace editor]: http://ace.ajax.org
+[node.js]: http://nodejs.org
+[twitter bootstrap]: http://twitter.github.com/bootstrap/
+[jquery]: http://jquery.com
+[@tjholowaychuk]: http://twitter.com/tjholowaychuk
+[express]: http://expressjs.com
+[angularjs]: http://angularjs.org
+[gulp]: http://gulpjs.com
+[pldb]: https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md
+[plgh]: https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md
+[plgd]: https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md
+[plod]: https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md
+[plme]: https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md
+[plga]: https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md
