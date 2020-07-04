@@ -104,16 +104,22 @@ include googleDrivePlayer.html id=page.driveId
 ```
 
 ### Step 6 (Optional): Adding Jupyter Notebooks
-When you need to add some python code to show examples, you can use the main jupyter notebook in root folder.
+
+When you need to add some python code to show examples, you can use [Binder](https://mybinder.org/).
+
+For example, we generated a Binder from a HelloWorld.ipynb file in root folder:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/galilasmb/book-testing-cin/master?filepath=HelloWorld.ipynb)
 
 ## Additional information
 
 ### References
 
 In this project we are using some frameworks and tools, these are some references that we consider important to have a full understanding of it:
-* Jekyll: https://github.com/jekyll/jekyll
-* Bulma Clean Theme: https://github.com/chrisrhymes/bulma-clean-theme
-* Binder: https://mybinder.org/
-* Creating your blog for free using Jekyll + Github pages tutorial: https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a
+
+- Jekyll: https://github.com/jekyll/jekyll
+- Bulma Clean Theme: https://github.com/chrisrhymes/bulma-clean-theme
+- Binder: https://mybinder.org/
+- Creating your blog for free using Jekyll + Github pages tutorial: https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a
 
 **Enjoy :D**
