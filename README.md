@@ -5,7 +5,7 @@
   - [Step 2: Configuring Github Pages and running locally](#step-2-configuring-github-pages-and-running-locally)
   - [Step 3: Adding a new post](#step-3-adding-a-new-post)
   - [Step 4: Configuring menu and adding pages](#step-4-configuring-menu-and-adding-pages)
-  - [Step 5: Adding an YouTube or Google Drive video](#step-5-adding-an-youtube-or-google-drive-video)
+  - [Step 5: Adding a YouTube or Google Drive video](#step-5-adding-a-youtube-or-google-drive-video)
   - [Step 6 (Optional): Adding Jupyter Notebooks](#step-6-optional-adding-jupyter-notebooks)
 - [Additional Information](#additional-information)
 
@@ -45,7 +45,7 @@ Now, if you want to see how it looks like, you can run typing this in a console 
     bundle exec jekyll serve
 ```
 
-After the project building, open your browser and type http://127.0.0.1:4000/[your base url] to see the result.
+After the project building, open your browser and type http://127.0.0.1:4000/ [your base url] to see the result.
 
 If you want to see theses changes published online, you must push them to repository and, after that, open your generated Github pages link (https://[your Github user].github.io/[you base url]).
 
@@ -62,7 +62,7 @@ Creating a new post is very easy, just follow theses steps:
 layout: post
 title:  "Post Title"
 date:   2020-07-01 19:48:36 -0300
-image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
+image: 'https://www.csrhymes.com/img/static-site-generator.jpg'
 categories: video
 ---
 
@@ -83,7 +83,7 @@ If you need to change the menu or add new pages, follow these instructions:
 - Menu: https://github.com/chrisrhymes/bulma-clean-theme#menubar
 - Pages: https://github.com/chrisrhymes/bulma-clean-theme#navigation
 
-### Step 5: Adding an YouTube or Google Drive video
+### Step 5: Adding a YouTube or Google Drive video
 
 1. Create a .md file for a post
 2. In your file, add a youtubeId and/or driveId key(s) (You can find these id values inside the video url like `dhh9zcA6Xwk` from https://www.youtube.com/watch?v=dhh9zcA6Xwk)
@@ -98,8 +98,8 @@ youtubeId: dhh9zcA6Xwk
 driveId: dhh9zcA6Xwk
 ---
 
-include youtubePlayer.html id=page.youtubeId
-include googleDrivePlayer.html id=page.driveId
+{% include youtubePlayer.html id=page.youtubeId %}
+{% include googleDrivePlayer.html id=page.driveId %}
 
 ```
 
