@@ -191,14 +191,16 @@ You can find this id value inside the video url like `dhh9zcA6Xwk` from https://
 {% include youtubePlayer.html id=page.youtubeId %}
 ```
 
-2.2. Google Drive
+2.2. Google Drive:
+
 Click on the video and on share link, check the option: Anyone with the link can view, and copy your id inside url like `1XejOcnSVg5KWxweoe-TXaDol-dqTeHTE` from https://drive.google.com/file/d/1XejOcnSVg5KWxweoe-TXaDol-dqTeHTE/view?usp=sharing. Make sure the video is shared as public.
 
 ```xml
 {% include googleDrivePlayer.html id=page.driveId %}
 ```
 
-2.3. Google Forms
+2.3. Google Forms:
+
 After creating the form, click in send, in link icon and copy it, you can find the id inside url like `1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw` from https://docs.google.com/forms/d/e/1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw/viewform?usp=sf_link
 ```xml
 {% include forms.html id=page.formsId %}
