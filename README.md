@@ -164,10 +164,10 @@ For the top navigation, change the navigation.yml file in `_data` directory with
   link: /about/
 ```
 
-### Step 5: Adding a YouTube or Google Drive video
+### Step 5: Adding a YouTube video, Google Drive video or Google Forms
 
-1. Create a .md file for a post
-2. In your file, add a youtubeId and/or driveId key(s) (You can find these id values inside the video url like `dhh9zcA6Xwk` from https://www.youtube.com/watch?v=dhh9zcA6Xwk)
+1. Create a .md file for a post or page
+2. In your file configuration, add a youtubeId and/or driveId and/or formsId key(s)
 
 ```xml
 ---
@@ -177,11 +177,31 @@ layout: page
 show_sidebar: true
 youtubeId: dhh9zcA6Xwk
 driveId: dhh9zcA6Xwk
+formsId: 1uYK_9QJaZN8a6eDGco0cMzMzEgReFM7JqI2h6EeEitU
 ---
 
-{% include youtubePlayer.html id=page.youtubeId %}
-{% include googleDrivePlayer.html id=page.driveId %}
+Insert the commands here...
 
+```
+
+2.1 Youtube Video:
+You can find this id value inside the video url like `dhh9zcA6Xwk` from https://www.youtube.com/watch?v=dhh9zcA6Xwk
+
+```xml
+{% include youtubePlayer.html id=page.youtubeId %}
+```
+
+2.2. Google Drive
+Click on the video and on share link, check the option: Anyone with the link can view, and copy your id inside url like `1XejOcnSVg5KWxweoe-TXaDol-dqTeHTE` from https://drive.google.com/file/d/1XejOcnSVg5KWxweoe-TXaDol-dqTeHTE/view?usp=sharing. Make sure the video is shared as public.
+
+```xml
+{% include googleDrivePlayer.html id=page.driveId %}
+```
+
+2.3. Google Forms
+After creating the form, click in send, in link icon and copy it, you can find the id inside url like `1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw` from https://docs.google.com/forms/d/e/1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw/viewform?usp=sf_link
+```xml
+{% include forms.html id=page.formsId %}
 ```
 
 ### Step 6 (Optional): Adding Jupyter Notebooks
