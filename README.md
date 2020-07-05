@@ -93,9 +93,9 @@ menubar: example_menu
 
 You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
 
-##### Creating a menubar data file
+##### Changing the menubar data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Change the data file in _data directory and use the following format:
 
 ```yaml
 - label: Example Menu
@@ -143,7 +143,7 @@ You may make multiple menus in the same file, separated by the label
 
 (Adapted from: https://github.com/chrisrhymes/bulma-clean-theme#navigation)
 
-For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can also add items to a dropdown menu.
+For the top navigation, change the navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can also add items to a dropdown menu.
 
 ```yaml
 - name: Páginas
