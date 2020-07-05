@@ -80,8 +80,89 @@ Insert your content here...
 
 If you need to change the menu or add new pages, follow these instructions:
 
-- Menu: https://github.com/chrisrhymes/bulma-clean-theme#menubar
-- Pages: https://github.com/chrisrhymes/bulma-clean-theme#navigation
+#### Menubar
+
+(Adapted from: https://github.com/chrisrhymes/bulma-clean-theme#menubar)
+
+The menubar gets its content from a data file in site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter like this:
+
+```yaml
+show_sidebar: false
+menubar: example_menu
+```
+
+You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
+
+##### Creating a menubar data file
+
+Create a data file in the _data directory and use the following format (if using yml)
+
+```yaml
+- label: Example Menu
+  items:
+    - name: Home
+      link: /
+    - name: Pages
+      link: /#
+      items:
+      - name: Página 1
+        link: /page-1/
+      - name: Página 2
+        link: /page-2/
+      - name: Página 3
+        link: /page-3/
+    - name: Sobre
+      link: /about/
+```
+
+##### Multiple menus
+
+You may make multiple menus in the same file, separated by the label
+
+```yaml
+- label: Menu Label
+  items:
+    - name: Example item
+      link: /example-item/
+- label: Second Menu Label
+  items:
+    - name: Parent Item
+      link: /parent-item/
+      items:
+        - name: Sublink 
+          link: /sublink/
+        - name: Sublink 2
+          link: /sublink2/
+- label: Third Menu Label
+  items:
+    - name: Another example item
+      link: /another-example-item/
+```
+
+#### Navigation
+
+(Adapted from: https://github.com/chrisrhymes/bulma-clean-theme#navigation)
+
+For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can also add items to a dropdown menu.
+
+```yaml
+- name: Páginas
+  link: /#
+  dropdown:
+    - name: Página 1
+      link: /page-1/
+    - name: Página 2
+      link: /page-2/
+    - name: Página 3
+      link: /page-3/
+
+- name: Material
+  link: /material/
+- name: Notebook
+  link: https://mybinder.org/v2/gh/galilasmb/book-testing-cin/master?filepath=HelloWorld.ipynb
+- name: Sobre
+  link: /about/
+```
 
 ### Step 5: Adding a YouTube or Google Drive video
 
