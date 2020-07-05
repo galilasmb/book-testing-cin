@@ -10,5 +10,7 @@
 
 - name: Material
   link: /material/
+- name: Notebook
+  link: https://mybinder.org/v2/gh/galilasmb/book-testing-cin/master?filepath=HelloWorld.ipynb
 - name: Sobre
   link: /about/
