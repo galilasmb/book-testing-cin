@@ -91,11 +91,11 @@ show_sidebar: false
 menubar: example_menu
 ```
 
-You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
+You will probably want to disable the show_sidebar otherwise there will be little room for the page content.
 
 ##### Changing the menubar data file
 
-Change the data file in _data directory and use the following format:
+Change the data file in \_data directory and use the following format:
 
 ```yaml
 - label: Example Menu
@@ -105,12 +105,12 @@ Change the data file in _data directory and use the following format:
     - name: Pages
       link: /#
       items:
-      - name: Página 1
-        link: /page-1/
-      - name: Página 2
-        link: /page-2/
-      - name: Página 3
-        link: /page-3/
+        - name: Página 1
+          link: /page-1/
+        - name: Página 2
+          link: /page-2/
+        - name: Página 3
+          link: /page-3/
     - name: Sobre
       link: /about/
 ```
@@ -129,7 +129,7 @@ You may make multiple menus in the same file, separated by the label
     - name: Parent Item
       link: /parent-item/
       items:
-        - name: Sublink 
+        - name: Sublink
           link: /sublink/
         - name: Sublink 2
           link: /sublink2/
@@ -202,17 +202,23 @@ Click on the video and on share link, check the option: Anyone with the link can
 2.3. Google Forms:
 
 After creating the form, click in send, in link icon and copy it, you can find the id inside url like `1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw` from https://docs.google.com/forms/d/e/1FAIpQLScPE3QyL3DsoXuOgY-uaVBEMQjZ1Seuckubarbi1JTIRygtWw/viewform?usp=sf_link
+
 ```xml
 {% include forms.html id=page.formsId %}
 ```
 
 ### Step 6 (Optional): Adding Jupyter Notebooks
 
-When you need to add some python code to show examples, you can use [Binder](https://mybinder.org/).
-
-For example, we generated a Binder from a HelloWorld.ipynb file in root folder:
+When you need to add some python code to show examples, you can use [Binder](https://mybinder.org/). For example, a Binder was generated from a HelloWorld.ipynb file in root folder:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/galilasmb/book-testing-cin/master?filepath=HelloWorld.ipynb)
+
+If you need to add a new notebook, you can follow these steps:
+
+- Open the [Binder](https://mybinder.org/) website
+- Fill in the `GitHub repository name or URL` input with your Github repository (i.e. https://github.com/galilasmb/book-testing-cin)
+- Fill in the path for the notebook location inside your Github repository (i.e. notebooks/MyNotebook.ipynb or HelloWorld.ipynb)
+- Click on launch to see the results
 
 ## Additional information
 
